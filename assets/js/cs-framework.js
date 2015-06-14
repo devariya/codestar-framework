@@ -1323,6 +1323,21 @@
     });
   };
 
+
+  // ======================================================
+  // DATE PICKER
+  // ------------------------------------------------------
+  $.fn.CSFRAMEWORK_DATEPICKER = function() {
+    jQuery(this).attr( 'id', '').datepicker({
+      changeMonth: true,
+      dateFormat: "dd-mm-yy",
+      changeYear: true
+    });
+  };
+
+
+
+
   // ======================================================
   // TOOLTIP HELPER
   // ------------------------------------------------------
@@ -1346,6 +1361,7 @@
       $('.cs-field-upload', this).CSFRAMEWORK_UPLOADER();
       $('.cs-field-typography', this).CSFRAMEWORK_TYPOGRAPHY();
       $('.cs-field-color-picker', this).CSFRAMEWORK_COLORPICKER();
+      $('.cs-field-date-picker', this).CSFRAMEWORK_DATEPICKER();
       $('.cs-help', this).CSFRAMEWORK_TOOLTIP();
     });
   };

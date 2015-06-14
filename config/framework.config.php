@@ -1311,6 +1311,31 @@ $options[]   = array(
 
 
     // -----------------------------
+    // begin: date picker options -
+    // -----------------------------
+    array(
+      'name'      => 'date_picker_options',
+      'title'     => 'date Picker',
+      'icon'      => 'fa fa-calendar',
+      'fields'    => array(
+
+        array(
+          'id'      => 'unique_date_picker_1',
+          'type'    => 'date_picker',
+          'title'   => 'Date Picker Field with Default',
+          'default' =>"15-06-2020",
+        ),
+
+        array(
+          'id'      => 'unique_date_picker_2',
+          'type'    => 'date_picker',
+          'title'   => 'Date Picker',
+        ),
+
+      ),
+    ), // end: date picker options
+
+    // -----------------------------
     // begin: image select options -
     // -----------------------------
     array(

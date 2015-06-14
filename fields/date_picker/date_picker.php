@@ -16,7 +16,7 @@ class CSFramework_Option_date_picker extends CSFramework_Options {
   public function output() {
 
     echo $this->element_before();
-    echo '<input type="text" name="'. $this->element_name() .'" value="'. $this->element_value() .'"'. $this->element_class( 'cs-field-color-picker' ) . $this->element_attributes( $this->extra_attributes() ) .'/>';
+    echo '<input type="text" name="'. $this->element_name() .'" value="'. $this->element_value() .'"'. $this->element_class( 'cs-field-date-picker' ). $this->element_attributes( $this->extra_attributes() ) .' >';
     echo $this->element_after();
 
   }
@@ -26,15 +26,7 @@ class CSFramework_Option_date_picker extends CSFramework_Options {
     $atts = array();
 
     if( isset( $this->field['id'] ) ) {
-      $atts['data-depend-id'] = $this->field['id'];
-    }
-
-    if ( isset( $this->field['rgba'] ) &&  $this->field['rgba'] === false ) {
-      $atts['data-rgba'] = 'false';
-    }
-
-    if( isset( $this->field['default'] ) ) {
-      $atts['data-default-color'] = $this->field['default'];
+      $atts['id'] = $this->field['id'];
     }
 
     return $atts;
